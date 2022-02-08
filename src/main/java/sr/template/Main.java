@@ -10,7 +10,7 @@ public final class Main extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        // Plugin startup logic
+        // Plugin startup logic here
         commandManager = new PaperCommandManager(this);
         commandManager.registerCommand(new MainCMD(this));
     }
