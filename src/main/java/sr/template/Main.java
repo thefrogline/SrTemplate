@@ -6,6 +6,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 import sr.template.commands.MainCMD;
+import sr.template.commands.SetSpawnCMD;
 
 import java.io.File;
 import java.io.IOException;
@@ -21,6 +22,7 @@ public final class Main extends JavaPlugin {
         // Plugin startup logic here
         commandManager = new PaperCommandManager(this);
         commandManager.registerCommand(new MainCMD(this));
+        commandManager.registerCommand(new SetSpawnCMD(this));
         createCustomConfig();
     }
 
